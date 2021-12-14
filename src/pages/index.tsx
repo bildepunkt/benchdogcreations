@@ -8,7 +8,15 @@ import Seo from "../components/seo"
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <h1>Hi people</h1>
+    <StaticImage
+      src="../images/logo.png"
+      width={300}
+      quality={95}
+      formats={["auto", "webp", "avif"]}
+      alt="A Gatsby astronaut"
+      style={{ marginBottom: `1.45rem` }}
+    />
+    {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
     <StaticImage
@@ -24,7 +32,7 @@ const IndexPage = () => (
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
       <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
       <Link to="/using-dsg">Go to "Using DSG"</Link>
-    </p>
+    </p> */}
   </Layout>
 )
 

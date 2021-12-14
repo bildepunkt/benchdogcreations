@@ -1,11 +1,10 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "benchdogcreations",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Chris Peters <c.concat.p@gmail.com>",
   "dependencies": {
-    "@types/react-helmet": "^6.1.4",
     "gatsby": "^4.3.0",
     "gatsby-plugin-gatsby-cloud": "^4.3.0",
     "gatsby-plugin-image": "^2.3.0",
@@ -26,7 +25,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "0BSD",
+  "license": "none",
   "scripts": {
     "build": "gatsby build",
     "deploy": "npm run build && git add public && git commit -m $(date +%s) && git subtree split --prefix public -b prod && git push -f origin prod:prod && git branch -D prod",

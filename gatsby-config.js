@@ -1,13 +1,14 @@
 module.exports = {
   siteMetadata: {
-    author: "@bildepunkt",
+    author: "Chris Peters",
     title: "Bench Dog Creations",
-    description: `Woodworks from my little garage workshop`,
-    siteUrl: "https://benchdogcreations.com/"
+    description: `Woodworks and other creations from my little garage workshop`,
+    siteUrl: "https://benchdogcreations.com/",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

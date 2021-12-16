@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Chris Peters <bildepunkt@gmail.com>",
   "dependencies": {
+    "@fontsource/poppins": "^4.5.0",
     "@types/react-helmet": "^6.1.4",
     "gatsby": "^4.3.0",
     "gatsby-plugin-gatsby-cloud": "^4.3.0",

@@ -1,7 +1,9 @@
+@use "colors" as color;
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em georgia, serif, sans-serif;
+  font: 112.5%/1.45em "Poppins";
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -10,7 +12,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: "Poppins";
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -19,6 +21,25 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
+
+/* sticky footer */
+.content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1 0 auto;
+}
+footer {
+  flex-shrink: 0;
+  font-size: 1.4em;
+  color: color.$dog-orange;
+  font-weight: 500;
+  text-align: center;
+  padding: 1em 0;
+}
+
 article,
 aside,
 details,

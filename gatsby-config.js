@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     author: "Chris Peters",
     title: "Bench Dog Creations",
-    description: `Woodworks and other creations from my little garage workshop`,
+    description: `Handmade, custom woodworks and more from my little garage workshop`,
     siteUrl: "https://benchdogcreations.com/",
   },
   plugins: [
@@ -19,7 +19,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "G-EZVJZMWFWX",
+        trackingId: "UA-80200669-3",
       },
     },
     `gatsby-transformer-sharp`,

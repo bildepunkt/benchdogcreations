@@ -12,6 +12,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import "./layout.scss"
+import "./footer.scss"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

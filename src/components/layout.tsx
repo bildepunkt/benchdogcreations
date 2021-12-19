@@ -11,13 +11,10 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { useHeight } from "../hooks/useHeight"
-
 import "./layout.scss"
 import "./footer.scss"
 
 const Layout = ({ children }) => {
-  const height = useHeight()
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,7 +26,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className={"content"} style={{ height }}>
+    <div className={"content"} style={{ height: window.innerHeight }}>
       <main>{children}</main>
       <footer>© {new Date().getFullYear()} BENCH DOG CREATIONS</footer>
     </div>

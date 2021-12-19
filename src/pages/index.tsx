@@ -3,18 +3,15 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { useHeight } from "../hooks/useHeight"
 
 import "./index.scss"
 
 const IndexPage = () => {
-  const height = useHeight()
-
   return (
     <Layout>
       <Seo title="Home" />
 
-      <div className="bg" style={{ height }} />
+      <div className="bg" style={{ height: window.innerHeight }} />
       <div className="logo">
         <StaticImage
           src="../images/logo.png"

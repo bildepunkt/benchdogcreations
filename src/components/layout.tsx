@@ -27,10 +27,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div
-      className={"content"}
-      style={{ height: isBrowser ? window.innerHeight : 0 }}
-    >
+    <div className={"content"}>
       <main>{children}</main>
       <footer>© {new Date().getFullYear()} BENCH DOG CREATIONS</footer>
     </div>

@@ -13,10 +13,7 @@ const IndexPage = () => {
     <Layout>
       <Seo title="Home" />
 
-      <div
-        className="bg"
-        style={{ height: isBrowser ? window.innerHeight : 0 }}
-      />
+      <div className="bg" />
       <div className="logo">
         <StaticImage
           src="../images/logo.png"

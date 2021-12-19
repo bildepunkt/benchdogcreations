@@ -15,6 +15,7 @@ import "./layout.scss"
 import "./footer.scss"
 
 const Layout = ({ children }) => {
+  const isBrowser = typeof window !== "undefined"
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -26,7 +27,10 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div className={"content"} style={{ height: window.innerHeight }}>
+    <div
+      className={"content"}
+      style={{ height: isBrowser ? window.innerHeight : 0 }}
+    >
       <main>{children}</main>
       <footer>© {new Date().getFullYear()} BENCH DOG CREATIONS</footer>
     </div>

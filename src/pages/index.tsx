@@ -7,11 +7,16 @@ import Seo from "../components/seo"
 import "./index.scss"
 
 const IndexPage = () => {
+  const isBrowser = typeof window !== "undefined"
+
   return (
     <Layout>
       <Seo title="Home" />
 
-      <div className="bg" style={{ height: window.innerHeight }} />
+      <div
+        className="bg"
+        style={{ height: isBrowser ? window.innerHeight : 0 }}
+      />
       <div className="logo">
         <StaticImage
           src="../images/logo.png"

@@ -1,11 +1,11 @@
-import * as React from "react"
+import { useEffect, useState } from "react"
 
 export function useHeight(): number {
-  const [height, setHeight] = React.useState(
+  const [height, setHeight] = useState(
     typeof window !== "undefined" ? window.innerHeight : undefined
   )
 
-  React.useEffect(() => {
+  useEffect(() => {
     let timeoutId = null
     const handleResize = () => {
       clearTimeout(timeoutId)
@@ -19,7 +19,7 @@ export function useHeight(): number {
     return () => {
       window.removeEventListener("resize", handleResize)
     }
-  }, [])
+  })
 
   return height
 }

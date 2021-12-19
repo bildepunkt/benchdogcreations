@@ -11,10 +11,13 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import { useHeight } from "../hooks/useHeight"
+
 import "./layout.scss"
 import "./footer.scss"
 
 const Layout = ({ children }) => {
+  const height = useHeight()
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,29 +28,8 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const [height, setHeight] = React.useState(
-    typeof window !== "undefined" ? window.innerHeight : undefined
-  )
-
-  React.useEffect(() => {
-    let timeoutId = null
-    const handleResize = () => {
-      clearTimeout(timeoutId)
-      timeoutId = setTimeout(() => {
-        setHeight(window.innerHeight)
-      }, 256)
-    }
-
-    window.addEventListener("resize", handleResize)
-
-    return () => {
-      window.removeEventListener("resize", handleResize)
-    }
-  }, [])
-
   return (
     <div className={"content"} style={{ height }}>
-      <div className="bg" style={{ height }} />
       <main>{children}</main>
       <footer>© {new Date().getFullYear()} BENCH DOG CREATIONS</footer>
     </div>

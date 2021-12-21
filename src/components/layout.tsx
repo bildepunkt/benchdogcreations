@@ -11,6 +11,8 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
+import Footer from "./footer"
+
 import "./layout.scss"
 import "./footer.scss"
 
@@ -29,7 +31,7 @@ const Layout = ({ children }) => {
   return (
     <div className={"content"}>
       <main>{children}</main>
-      <footer>© {new Date().getFullYear()} BENCH DOG CREATIONS</footer>
+      <Footer />
     </div>
   )
 }

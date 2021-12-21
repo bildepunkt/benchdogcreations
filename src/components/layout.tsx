@@ -12,9 +12,9 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Footer from "./footer"
+import Header from "./header"
 
 import "./layout.scss"
-import "./footer.scss"
 
 const Layout = ({ children }) => {
   const isBrowser = typeof window !== "undefined"
@@ -30,6 +30,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className={"content"}>
+      <Header />
       <main>{children}</main>
       <Footer />
     </div>

@@ -1,0 +1,27 @@
+@use "colors" as color;
+
+.header {
+  position: fixed;
+  right: 0;
+  z-index: 1;
+
+  button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    color: color.$fiona-orange;
+    cursor: pointer;
+    font-size: 1.8rem;
+    margin: 0.3em 0.4em;
+    overflow: hidden;
+    outline: none;
+    padding: 0.3em;
+    transition: 256ms;
+  }
+
+  button:active,
+  button:hover {
+    color: color.$secondary;
+    transition: 256ms;
+  }
+}

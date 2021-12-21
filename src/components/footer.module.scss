@@ -1,6 +1,6 @@
 @use "colors" as color;
 
-footer {
+.footer {
   display: flex;
   flex-flow: row wrap;
   flex-shrink: 0;
@@ -10,30 +10,17 @@ footer {
   padding: 1.4em;
   z-index: 1;
 
-  .copyright {
-    order: 1;
-    width: 50%;
-    text-align: left;
-  }
-
-  .links {
-    order: 2;
-    width: 50%;
-    text-align: right;
-    font-size: 1.8rem;
-    margin-top: -0.16em; // vertical align for font size
-
-    a {
-      margin: 0 0.4em;
-    }
-  }
-
   a,
-  a:visited,
-  a:active,
-  a:hover {
+  a:visited {
     color: inherit;
     text-decoration: none;
+    transition: 256ms;
+  }
+
+  a:active,
+  a:hover {
+    color: color.$secondary;
+    transition: 256ms;
   }
 
   @media screen and (max-width: 768px) {
@@ -46,5 +33,23 @@ footer {
       text-align: center;
       margin-top: 0.2em;
     }
+  }
+}
+
+.copyright {
+  order: 1;
+  width: 50%;
+  text-align: left;
+}
+
+.links {
+  order: 2;
+  width: 50%;
+  text-align: right;
+  font-size: 1.8rem;
+  margin-top: -0.18em; // vertical align for font size
+
+  a {
+    margin: 0 0.4em;
   }
 }

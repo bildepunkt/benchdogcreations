@@ -8,13 +8,13 @@ const Footer = () => (
     </div>
     <div className="links">
       <a href="//www.instagram.com/benchdogcreations/">
-        <FaInstagram />
+        <FaInstagram title="Instagram" role="img" />
       </a>
       <a href="//www.facebook.com/bench.dog.creations">
-        <FaFacebook />
+        <FaFacebook title="Facebook" role="img" />
       </a>
       <a href="mailto:chris@benchdogcreations.com">
-        <FaRegEnvelope />
+        <FaRegEnvelope title="Email" role="img" />
       </a>
     </div>
   </footer>

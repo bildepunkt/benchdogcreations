@@ -1,7 +1,7 @@
-import * as React from "react"
-import { FaRegEnvelope, FaFacebook, FaInstagram } from "react-icons/fa"
+import * as React from "react";
+import { FaRegEnvelope, FaFacebook, FaInstagram } from "react-icons/fa";
 
-import * as style from "./footer.module.scss"
+import * as style from "./footer.module.scss";
 
 const Footer = () => (
   <footer className={style.footer}>
@@ -20,6 +20,6 @@ const Footer = () => (
       </a>
     </div>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;
